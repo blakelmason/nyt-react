@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/blakelmason/nyt-react/issues"
   },
-  "homepage": "https://github.com/blakelmason/nyt-react#readme"
+  "homepage": "https://github.com/blakelmason/nyt-react#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
