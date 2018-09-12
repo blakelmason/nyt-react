@@ -11,7 +11,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-mongoose.connect(`mongodb://${process.env.DB_USERNAME}:${DB_PASSWORD}@ds153552.mlab.com:53552/nyt`)
+mongoose.connect(`mongodb://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@ds153552.mlab.com:53552/nyt`)
 //mongoose.connect('mongodb://localhost/nyt');
 
 const db = require('./db');
