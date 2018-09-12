@@ -1,29 +1,26 @@
 {
-  "name": "mern",
+  "name": "nyt-react",
   "version": "1.0.0",
-  "description": "Mern Demo",
+  "description": "",
   "main": "server.js",
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.14"
+  },
+  "devDependencies": {},
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
-    "client": "cd client && npm run start",
-    "seed": "node scripts/seedDB.js",
-    "install": "cd client && yarn install",
-    "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blakelmason/nyt-react.git"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^3.5.0",
-    "nodemon": "^1.11.0"
+  "bugs": {
+    "url": "https://github.com/blakelmason/nyt-react/issues"
   },
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "dotenv": "^6.0.0",
-    "express": "^4.16.3",
-    "mongoose": "^5.2.14",
-    "react-router-dom": "^4.3.1"
-  }
+  "homepage": "https://github.com/blakelmason/nyt-react#readme"
 }
