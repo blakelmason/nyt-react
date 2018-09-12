@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
@@ -9,8 +11,11 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-
-mongoose.connect('mongodb://localhost/nyt');
+if (process.env.NODE_ENV === 'production') {
+  mongoose.connect(`mongodb://${process.env.DB_USERNAME}:${DB_PASSWORD}@ds153552.mlab.com:53552/nyt`)
+} else {
+  mongoose.connect('mongodb://localhost/nyt');
+}
 
 const db = require('./db');
 
